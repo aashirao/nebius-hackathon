@@ -2,8 +2,10 @@
 
 An Android-first student money tracker for irregular income and flexible savings goals.
 
-**Status: initial source prototype, not a verified submission or production banking app.**
-The backend's five mocked validation tests passed locally. This environment did not have javac, Gradle or an Android SDK, so the Android source and Java core tests have not been compiled or run. No APK, public deployment, GitHub push, phone test or live Nebius call has been completed. The included CI workflow builds a debug APK once pushed to GitHub; its result must be checked, not assumed.
+**Status: Android debug APK built successfully; not yet a verified submission or production banking app.**
+GitHub Actions passed the five mocked backend tests, Java core checks, and Android compilation on 3 October 2026. [Successful build and APK download](https://github.com/aashirao/nebius-hackathon/actions/runs/37103329536): open **Artifacts → pocketwise-debug-apk**, download and unzip it, then install `app-debug.apk` on your Android test phone. GitHub sign-in may be required to download the artifact. This is a debug test build, not a Play Store release.
+
+Public source is now in this repository. Phone/emulator behavior, real notification capture, backend deployment and a live Nebius call remain unverified. Never treat successful compilation as proof of those features.
 
 ## Implemented source
 
@@ -43,7 +45,7 @@ gradle -p android assembleDebug
 ```
 
 APK output: `android/app/build/outputs/apk/debug/app-debug.apk`.
-The GitHub workflow installs those build dependencies and uploads the APK as an Actions artifact. It has not run yet.
+The GitHub workflow installs those build dependencies and uploads the APK as an Actions artifact. The first successful run is linked above.
 
 On phone:
 1. Set opening balance to your actual balance immediately before your first imported transaction.
@@ -88,6 +90,6 @@ Backend tests mock inference; they are not proof of a live Nebius call. Android 
 - Captured notifications are not a reliable bank balance. App allocations do not reserve or transfer real bank funds. External spending can reduce funds below allocations, which the UI flags.
 - AI classification sends redacted merchant names only. It cannot infer repayment intent or use trip receipts yet. The confidence threshold is not calibrated accuracy. AI failures preserve local categories and can be retried manually; durable background retries are not implemented.
 - A completed incoming transaction updates funds automatically; no real-time savings prompt or automatic allocation policy is implemented.
-- Android notification listener, UI layouts and build must be verified before making working-app claims. No Play Store approval is implied.
+- Android notification listener and UI layouts must be verified on a device before making working-app claims. No Play Store approval is implied.
 
 See `docs/HACKATHON.md` for submission requirements and `docs/DEMO.md` for a proposed video sequence.

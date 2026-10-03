@@ -15,7 +15,7 @@ Deadline: 30 October 2026, 10:00 am PDT = 10:30 pm India time. Verify the live r
 - [ ] Build and test a functioning Android app on its intended platform, consistent with every demo claim.
 - [ ] Make and verify a runtime inference call to a NVIDIA Nemotron model on Nebius Token Factory. A hardcoded or mocked classifier alone does not satisfy this requirement. Nebius hosting is encouraged but not mandatory when runtime inference meets the rule.
 - [ ] Record actual model ID, endpoint, latency, failure behavior and examples. Do not fabricate feedback or accuracy.
-- [ ] Publish all required source, assets, instructions and an open-source license in a public repository. MIT license is included but repository publication remains pending.
+- [x] Publish initial source, setup instructions and MIT license in https://github.com/aashirao/nebius-hackathon. Keep instructions aligned with the final tested app.
 - [ ] Provide a working demo URL or Android test-build URL and clear testing instructions. Include necessary restricted judge credentials if private; do not expose unrestricted keys. Access must be free and available through judging.
 - [ ] Upload a public YouTube demo under three minutes showing the Android app working and explaining actual Nebius/NVIDIA usage.
 - [ ] Provide English project description, demo/testing instructions, chosen track, and honest feedback on tools used.
@@ -37,4 +37,4 @@ The resources page lists $25 Token Factory credits via its linked form using act
 
 ## Not yet compliant as a finished submission
 
-Source and mocked backend tests are available. Android compilation/device QA, live inference, deployment, public repository, video, feedback and Devpost submission remain outstanding. This checklist is not a certification of compliance.
+Public source, a compiled Android debug APK, and passing backend/Java core tests are available. Device QA, live inference, backend deployment, durable judge test-build access, video, feedback and Devpost submission remain outstanding. This checklist is not a certification of compliance.
