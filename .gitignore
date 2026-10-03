@@ -1,0 +1,10 @@
+.env
+.env.*
+!.env.example
+local.properties
+.gradle/
+build/
+__pycache__/
+*.class
+*.jks
+*.keystore
